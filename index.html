@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KIM HANA Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <div class="cursor"></div>
+
+  <header class="nav light-mode">
+    <nav>
+      <ul>
+        <li><a href="#home">INTRO</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#skill">SKILL</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <h1>I’m Hana Kim,</br>
+        a designer who prefers</br>
+        simple and refined design.</h1>
+    </div>
+    <div class="img-box" id="img-box">
+      <img src="img/main.jpg" />
+    </div>
+  </section>
+
+  <section class="section-two" id="about">
+    <div class="history-container">
+      <h2 class="history-title">MY <span>HISTORY</span></h2>
+
+      <div class="timeline-wrapper">
+        <div class="line-horizontal"></div>
+        <div class="timeline-item item-up" style="left: 0%">
+          <div class="year">1985</div>
+          <div class="dot"></div>
+          <div class="line-vertical"></div>
+          <div class="content">Birth</div>
+        </div>
+        <div class="timeline-item item-down" style="left: 15%">
+          <div class="year">2004</div>
+          <div class="dot"></div>
+          <div class="line-vertical"></div>
+          <div class="content">명지대학교 건축학과</div>
+        </div>
+        <div class="timeline-item item-up" style="left: 30%">
+          <div class="year">2006</div>
+          <div class="dot"></div>
+          <div class="line-vertical"></div>
+          <div class="content">명지대학교 행정학과</div>
+        </div>
+        <div class="timeline-item item-down" style="left: 45%">
+          <div class="year">2009</div>
+          <div class="dot"></div>
+          <div class="line-vertical"></div>
+          <div class="content">웨딩플래너</div>
+        </div>
+        <div class="timeline-item item-up" style="left: 60%">
+          <div class="year">2011</div>
+          <div class="dot"></div>
+          <div class="line-vertical"></div>
+          <div class="content">법무법인 비서</div>
+        </div>
+        <div class="timeline-item item-down" style="left: 75%">
+          <div class="year">2013</div>
+          <div class="dot"></div>
+          <div class="line-vertical"></div>
+          <div class="content">경리, 회계</div>
+        </div>
+        <div class="timeline-item item-up" style="left: 90%">
+          <div class="year">2014</div>
+          <div class="dot"></div>
+          <div class="line-vertical"></div>
+          <div class="content">출산 및 해외거주</div>
+        </div>
+      </div>
+
+      <div class="v-timeline">
+        <div class="v-line"></div>
+        <div class="v-item">
+          <div class="v-dot"></div>
+          <div class="v-year">1985</div>
+          <div class="v-content">Birth</div>
+        </div>
+        <div class="v-item">
+          <div class="v-dot"></div>
+          <div class="v-year">2004</div>
+          <div class="v-content">명지대학교 건축학과 입학</div>
+        </div>
+        <div class="v-item">
+          <div class="v-dot"></div>
+          <div class="v-year">2006</div>
+          <div class="v-content">명지대학교 행정학과 전과</div>
+        </div>
+        <div class="v-item">
+          <div class="v-dot"></div>
+          <div class="v-year">2009</div>
+          <div class="v-content">웨딩플래너</div>
+        </div>
+        <div class="v-item">
+          <div class="v-dot"></div>
+          <div class="v-year">2011</div>
+          <div class="v-content">법무법인 송무, 비서</div>
+        </div>
+        <div class="v-item">
+          <div class="v-dot"></div>
+          <div class="v-year">2013</div>
+          <div class="v-content">경리, 회계</div>
+        </div>
+        <div class="v-item">
+          <div class="v-dot"></div>
+          <div class="v-year">2014</div>
+          <div class="v-content">출산, 육아 및 해외거주</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-portfolio" id="portfolio">
+    <div class="portfolio-container">
+      <div class="portfolio-grid">
+        <div class="portfolio-textcard">
+          <h2>PORTFOLIO.</h2>
+          <p>
+            CHECK OUT SOME OF THE WEBSITES I'VE<br />CREATED WHILE LEARNING.
+          </p>
+        </div>
+
+        <a href="#" class="portfolio-card">
+          <div class="card-img">
+            <img src="img/frama.jpg" alt="Frama" />
+          </div>
+          <div class="card-text">
+            <h3>FRAMA HOMEPAGE<br />REDESIGN</h3>
+          </div>
+        </a>
+
+        <a href="#" class="portfolio-card">
+          <div class="card-img">
+            <img src="img/team.png" alt="Ssense" />
+          </div>
+          <div class="card-text">
+            <h3>SSENSE HOMEPAGE<br />REDESIGN</h3>
+            <p>TEAM PROJECT</p>
+          </div>
+        </a>
+
+        <a href="#" class="portfolio-card">
+          <div class="card-img">
+            <img src="img/owel.png" alt="Owol" />
+          </div>
+          <div class="card-text">
+            <h3>OWOL SCHOOL<br />HOMEPAGE REDESIGN</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-skill" id="skill">
+    <div class="skill-marquee">
+      <div class="marquee-content">
+        <div class="skill-item"><img src="img/WORK.png" alt="Skills" /></div>
+        <div class="skill-item"><img src="img/WORK.png" alt="Skills" /></div>
+        <div class="skill-item"><img src="img/WORK.png" alt="Skills" /></div>
+        <div class="skill-item"><img src="img/WORK.png" alt="Skills" /></div>
+      </div>
+    </div>
+
+    <div class="skill-bottom">
+      <div class="experience-text">
+        <h2>EXPERIENCE<br />SHAPES EXPERTISE</h2>
+      </div>
+      <div class="description-text">
+        <p>다양한 경험과 관심사는<br />다양한 시각을 만듭니다</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-contact" id="contact">
+    <div class="contact-container">
+      <div class="phone-wrapper">
+        <img src="img/insta.png" alt="Contact Phone" class="phone-img" />
+
+        <a href="https://www.instagram.com/your_id" target="_blank" class="phone-btn">
+          <div class="circle-overlay"></div>
+          <img src="img/click.png" alt="Click Icon" class="click-icon" />
+        </a>
+      </div>
+
+      <div class="tag-container">
+        <div class="tag-row">
+          <span class="tag">#INTERIOR</span>
+          <span class="tag">#I LIKE</span>
+          <span class="tag">#PHOTO</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">#PUZZLE</span>
+          <span class="tag big">#EXERCISE</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag big">#MONEY MANAGEMENT</span>
+          <span class="tag">#TRAVEL</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">#COOKING</span>
+          <span class="tag">#FOOD</span>
+          <span class="tag">#LIBRARY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
