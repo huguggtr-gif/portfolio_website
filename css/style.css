@@ -108,7 +108,7 @@ body::-webkit-scrollbar {
   min-height: 100vh;
   height: auto;
   padding-top: 150px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -118,9 +118,12 @@ body::-webkit-scrollbar {
 
 .hero-left h1 {
   font-size: 35px;
-  line-height: 1.1;
+  line-height: 1.2;
   letter-spacing: 3px;
   font-weight: 400;
+  color: #454545;
+}
+.hero-left h1 span {
   color: #1a1a1a;
 }
 
@@ -163,7 +166,7 @@ body::-webkit-scrollbar {
   font-size: clamp(40px, 6vw, 70px);
   font-weight: 400;
   margin-top: 0;
-  margin-bottom: clamp(120px, 15vh, 200px);
+  margin-bottom: clamp(150px, 15vh, 250px);
   transition: font-size 0.3s ease;
   line-height: 1.2;
 }
@@ -347,12 +350,14 @@ body::-webkit-scrollbar {
 .portfolio-card {
   text-decoration: none;
   display: flex;
+  position: relative;
   flex-direction: column;
   transition: transform 0.3s ease;
   border: 1px solid var(--border-color);
   margin-top: 50px;
   opacity: 0;
   transform: translateY(80px);
+  overflow: hidden;
 }
 
 .card-img {
@@ -361,6 +366,8 @@ body::-webkit-scrollbar {
   background-color: #d9d9d9;
   border-bottom: 1px solid var(--border-color);
   overflow: hidden;
+  display: block;
+  transition: 0.5s;
 }
 
 .card-img img {
@@ -397,6 +404,37 @@ body::-webkit-scrollbar {
 
 .portfolio-card:hover {
   transform: translateY(-10px);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 40px;
+  color: white;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.card-overlay p {
+  font-size: 24px;
+  opacity: 0.9;
+}
+
+.card-overlay span {
+  color: #afacac;
+}
+
+.portfolio-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.05);
 }
 
 /* SKILL 섹션 */
@@ -479,7 +517,7 @@ s .skill-marquee {
   align-items: flex-end;
   justify-content: center;
   gap: 80px;
-  padding-bottom: 80px;
+  padding-top: 100px;
 }
 
 .phone-wrapper {
@@ -514,7 +552,6 @@ s .skill-marquee {
 }
 
 @keyframes pulseClick {
-
   0%,
   100% {
     transform: scale(1);
@@ -543,7 +580,6 @@ s .skill-marquee {
   flex-direction: column;
   gap: 15px;
 }
-
 
 /* 반응형 */
 
@@ -600,11 +636,8 @@ s .skill-marquee {
   }
 }
 
-
-
 /* 2. 모바일 (768px 이하) */
 @media (max-width: 768px) {
-
   /* 네비게이션 간소화 */
   .nav {
     padding: 20px;
@@ -660,7 +693,6 @@ s .skill-marquee {
     display: block;
   }
 
-
   .v-line {
     position: absolute;
     left: 0;
@@ -684,7 +716,6 @@ s .skill-marquee {
     width: 10px;
     height: 10px;
     background: #c16548;
-
   }
 
   .v-year {
@@ -711,7 +742,6 @@ s .skill-marquee {
     width: 100px;
   }
 
-
   .section-portfolio {
     padding-top: 80px;
     display: block;
@@ -734,6 +764,10 @@ s .skill-marquee {
 
   .portfolio-card {
     margin-top: 20px;
+  }
+
+  .card-overlay p:nth-of-type(n + 4) {
+    display: none;
   }
 
   /* 스킬 섹션 */
@@ -791,7 +825,6 @@ s .skill-marquee {
     margin: 0;
     white-space: nowrap;
   }
-
 
   .cursor {
     display: none;
