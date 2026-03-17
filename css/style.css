@@ -102,18 +102,21 @@ body::-webkit-scrollbar {
 .hero {
   background: #f1f1e6;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   gap: 100px;
   min-height: 100vh;
   height: auto;
-  padding-top: 150px;
-  padding-bottom: 100px;
+  padding-top: clamp(80px, 15vh, 180px);
+  padding-bottom: clamp(40px, 10vh, 120px);
 
   scroll-snap-align: start;
   scroll-snap-stop: always;
   position: relative;
   box-sizing: border-box;
+}
+.hero-left {
+  transform: translateY(75%);
 }
 
 .hero-left h1 {
@@ -599,6 +602,9 @@ s .skill-marquee {
     gap: 5vw;
     padding-bottom: 150px;
   }
+  .hero-left {
+  transform: translateY(30%);
+}
 
   .hero-left h1 {
     font-size: clamp(20px, 3vw, 35px);
