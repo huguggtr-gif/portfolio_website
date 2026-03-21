@@ -417,21 +417,35 @@ body::-webkit-scrollbar {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  padding: 40px;
+  padding: 20px;
   color: white;
   opacity: 0;
   transition: 0.4s;
 }
 
 .card-overlay p {
-  font-size: 24px;
+  font-family: sans-serif;
+  font-size: 16px;
   opacity: 0.9;
+  font-weight: bold;
 }
 
 .card-overlay span {
   color: #afacac;
+  font-size: 14px;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  margin-top: 4px;
 }
 
+.icons img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
 .portfolio-card:hover .card-overlay {
   opacity: 1;
 }
@@ -603,8 +617,8 @@ s .skill-marquee {
     padding-bottom: 150px;
   }
   .hero-left {
-  transform: translateY(30%);
-}
+    transform: translateY(30%);
+  }
 
   .hero-left h1 {
     font-size: clamp(20px, 3vw, 35px);
