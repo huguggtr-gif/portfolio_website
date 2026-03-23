@@ -283,7 +283,10 @@ body::-webkit-scrollbar {
   top: 105px;
 }
 
-/* PORTFOLIO */
+/* ================================================
+   PORTFOLIO 섹션 — 가로 스크롤 캐러셀
+   ================================================ */
+
 :root {
   --bg-portfolio: #f1f1e6;
   --card-orange: #c16548;
@@ -309,58 +312,89 @@ body::-webkit-scrollbar {
   width: 100%;
   background-color: var(--bg-portfolio);
   display: flex;
-  align-items: center;
-  padding: 120px 80px 80px 80px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 0 80px 0;
   scroll-snap-align: start;
   position: relative;
+  overflow: hidden;
 }
 
 .portfolio-container {
   width: 100%;
-  max-width: 1800px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  align-items: start;
-}
-
-/* 왼쪽 텍스트 섹션 */
-.portfolio-textcard {
+/* 상단 텍스트 헤더 */
+.portfolio-header {
+  padding: 0 80px;
+  margin-bottom: 50px;
   color: var(--text-dark);
-  padding-top: 20px;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
-.portfolio-textcard h2 {
-  font-size: 80px;
+.portfolio-header h2 {
+  font-size: clamp(50px, 6vw, 80px);
   line-height: 1;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   text-transform: uppercase;
 }
 
-.portfolio-textcard p {
+.portfolio-header p {
   font-family: sans-serif;
   font-size: 14px;
   line-height: 1.6;
   font-weight: 700;
 }
 
+/* 캐러셀 래퍼 */
+.portfolio-carousel-wrap {
+  position: relative;
+  width: 100%;
+}
+
+/* 가로 스크롤 캐러셀 */
+.portfolio-carousel {
+  display: flex;
+  gap: 24px;
+  padding: 10px 80px 40px 80px;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+}
+
+.portfolio-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolio-carousel.is-dragging {
+  cursor: grabbing;
+}
+
 /* 카드 공통 스타일 */
 .portfolio-card {
   text-decoration: none;
   display: flex;
-  position: relative;
   flex-direction: column;
-  transition: transform 0.3s ease;
+  position: relative;
   border: 1px solid var(--border-color);
-  margin-top: 50px;
-  opacity: 0;
-  transform: translateY(80px);
   overflow: hidden;
+  flex-shrink: 0;
+  /* 카드 너비: 화면에 약 3.4개 보이도록 */
+  width: calc(28vw - 10px);
+  min-width: 260px;
+  max-width: 420px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: transform 0.3s ease;
+  background-color: var(--bg-portfolio);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-8px);
 }
 
 .card-img {
@@ -377,42 +411,38 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .card-img img {
+  transform: scale(1.05);
 }
 
 .card-text {
   padding: 25px 20px;
   background-color: transparent;
   color: var(--text-dark);
-  min-height: 160px;
+  min-height: 130px;
 }
 
 .card-text h3 {
-  font-size: 28px;
+  font-size: clamp(20px, 2vw, 28px);
   line-height: 1.1;
   font-weight: 300;
   margin-bottom: 10px;
 }
 
-.cart-text p {
+.card-text p {
   font-family: sans-serif;
-  font-size: 18px;
-}
-
-.team-tag {
   font-size: 12px;
-  font-weight: bold;
-  margin-top: 10px;
   color: #666;
-}
-
-.portfolio-card:hover {
-  transform: translateY(-10px);
+  margin-top: 6px;
 }
 
 .card-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.82);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -420,20 +450,28 @@ body::-webkit-scrollbar {
   padding: 20px;
   color: white;
   opacity: 0;
-  transition: 0.4s;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.portfolio-card:hover .card-overlay {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .card-overlay p {
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 0.9;
   font-weight: bold;
+  margin-bottom: 6px;
 }
 
 .card-overlay span {
   color: #afacac;
-  font-size: 14px;
+  font-size: 12px;
 }
+
 .icons {
   display: flex;
   flex-direction: row;
@@ -442,19 +480,28 @@ body::-webkit-scrollbar {
 }
 
 .icons img {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   object-fit: contain;
 }
-.portfolio-card:hover .card-overlay {
-  opacity: 1;
+
+/* 드래그 힌트 */
+.carousel-hint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 80px;
+  color: var(--text-dark);
+  font-size: 14px;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  opacity: 0.45;
+  margin-top: 4px;
 }
 
-.portfolio-card:hover img {
-  transform: scale(1.05);
-}
-
-/* SKILL 섹션 */
+/* ================================================
+   SKILL 섹션
+   ================================================ */
 .section-skill {
   width: 100%;
   min-height: 100vh;
@@ -466,7 +513,7 @@ body::-webkit-scrollbar {
   scroll-snap-align: start;
 }
 
-s .skill-marquee {
+.skill-marquee {
   width: 100%;
   background-color: #f1f1e6;
   padding: 30px 0;
@@ -518,7 +565,7 @@ s .skill-marquee {
   font-weight: bold;
 }
 
-/* CONTACT 섹션  */
+/* CONTACT 섹션 */
 .section-contact {
   width: 100%;
   min-height: 100vh;
@@ -573,7 +620,6 @@ s .skill-marquee {
   100% {
     transform: scale(1);
   }
-
   50% {
     transform: scale(1.2);
     opacity: 0.8;
@@ -599,7 +645,9 @@ s .skill-marquee {
   margin-bottom: 100px;
 }
 
-/* 반응형 */
+/* ================================================
+   반응형
+   ================================================ */
 
 /* 1. 태블릿 & 작은 노트북 (1200px 이하) */
 @media (max-width: 1200px) {
@@ -633,17 +681,24 @@ s .skill-marquee {
   }
 
   .section-portfolio {
-    padding: 100px 40px;
-    align-items: flex-start;
+    padding: 100px 0 60px 0;
   }
 
-  .portfolio-textcard h2 {
-    font-size: clamp(40px, 8vw, 60px);
-    margin-top: 20px;
+  .portfolio-header {
+    padding: 0 40px;
   }
 
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .portfolio-carousel {
+    padding: 10px 40px 40px 40px;
+  }
+
+  .carousel-hint {
+    padding: 0 40px;
+  }
+
+  /* 태블릿에서 카드 너비 조정: 약 2.4개 보이도록 */
+  .portfolio-card {
+    width: calc(42vw - 10px);
   }
 
   .section-two {
@@ -754,7 +809,6 @@ s .skill-marquee {
 
   .year {
     font-size: 24px;
-    /* 45px -> 28px로 축소 */
   }
 
   .content {
@@ -763,30 +817,32 @@ s .skill-marquee {
     width: 100px;
   }
 
+  /* 포트폴리오 섹션 모바일 */
   .section-portfolio {
-    padding-top: 80px;
-    display: block;
+    padding: 80px 0 60px 0;
   }
 
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .portfolio-header {
+    padding: 0 20px;
+    margin-bottom: 30px;
   }
 
-  .portfolio-textcard {
-    margin-bottom: 40px;
-    padding-top: 20px;
+  .portfolio-carousel {
+    padding: 10px 20px 30px 20px;
+    gap: 16px;
   }
 
-  .portfolio-textcard {
-    margin-bottom: 40px;
-    padding-top: 20px;
+  .carousel-hint {
+    padding: 0 20px;
   }
 
+  /* 모바일: 약 1.2개 보이도록 */
   .portfolio-card {
-    margin-top: 20px;
+    width: calc(80vw - 10px);
+    min-width: 220px;
   }
 
+  /* 오버레이 일부 숨김 */
   .card-overlay p:nth-of-type(n + 4) {
     display: none;
   }

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KIM HANA Portfolio</title>
+     <script
+      src="https://kit.fontawesome.com/cada64902b.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -28,7 +32,7 @@
     <section class="hero" id="home">
       <div class="hero-left">
         <h1>
-          I’m Hana Kim,<br />
+          I'm Hana Kim,<br />
           a web designer who values<br />
           simple and refined design.<br />
           <span
@@ -135,156 +139,140 @@
 
     <section class="section-portfolio" id="portfolio">
       <div class="portfolio-container">
-        <div class="portfolio-grid">
-          <div class="portfolio-textcard">
-            <h2>PORTFOLIO.</h2>
-            <p>
-              CHECK OUT SOME OF THE WEBSITES I'VE<br />CREATED WHILE LEARNING.
-            </p>
-          </div>
 
-          <a
-            href="https://huguggtr-gif.github.io/portfolio_frama/"
-            class="portfolio-card"
-          >
-            <div class="card-img">
-              <img src="img/frama.jpg" alt="Frama" />
-            </div>
-            <div class="card-overlay">
-              <p><span>TYPE</span><br />Personal Project</p>
+        <!-- 상단 텍스트 헤더 -->
+        <div class="portfolio-header">
+          <h2>PORTFOLIO.</h2>
+          <p>CHECK OUT SOME OF THE WEBSITES I'VE CREATED WHILE LEARNING.</p>
+        </div>
 
-              <p>
-                <span>ROLE</span><br />
-                UI Design / Frontend Publishing
-              </p>
+        <!-- 드래그 가능한 가로 스크롤 캐러셀 -->
+        <div class="portfolio-carousel-wrap">
+          <div class="portfolio-carousel" id="portfolioCarousel">
 
-              <p>
-                <span>TOOLS</span><br />
-                <div class=icons>
-                  <img src="img/figma.png" alt="#"" />
-                  <img src="img/html.png" alt="#" />
-                  <img src="img/css.png" alt="#"" />
-                  <img src="img/java.png" alt="#" />
-                  <img src="img/illust.png" alt="#" />
-                  <img src="img/photoshop.png" alt="#" />
-                  <img src="img/claude.png" alt="#" />
-                  <img src="img/chatgpt.png" alt="#" />
-                </div>
-              </p>
-
-              <p>
-                <span>CONCEPT</span><br />
-                Minimal Nordic design inspired by natural materials
-              </p>
-
-              <p>
-                <span>FOCUS</span><br />
-                Typography / Grid System / Scroll Interaction
-              </p>
-            </div>
-
-            <div class="card-text">
-              <h3>FRAMA HOMEPAGE<br />REDESIGN</h3>
-            </div>
-          </a>
-
-          <a
-            href="https://chaeseunghyeon.github.io/team/"
-            class="portfolio-card"
-          >
-            <div class="card-img">
-              <img src="img/team.png" alt="Ssense" />
-            </div>
-            <div class="card-overlay">
-              <p><span>TYPE</span><br />Team Project</p>
-
-              <p>
-                <span>ROLE</span><br />
-                UI Design / Frontend Publishing<br />
-                (Women / Dress Section)
-              </p>
-
-              <p>
-                <span>TOOLS</span><br />
-                <div class=icons>
-                  <img src="img/figma.png" alt="#"" />
-                  <img src="img/html.png" alt="#" />
-                  <img src="img/css.png" alt="#"" />
-                  <img src="img/java.png" alt="#" />
-                  <img src="img/illust.png" alt="#" />
-                  <img src="img/photoshop.png" alt="#" />
-                  <img src="img/claude.png" alt="#" />
-                  <img src="img/chatgpt.png" alt="#" />
-                </div>
-              </p>
-
-              <p>
-                <span>CONCEPT</span><br />
-                Fashion e-commerce website redesign
-              </p>
-
-              <p>
-                <span>FOCUS</span><br />
-                Product Layout / Category Navigation / Responsive Web
-              </p>
-            </div>
-
-            <div class="card-text">
-              <h3>SSENSE HOMEPAGE<br />REDESIGN</h3>
-              <p>TEAM PROJECT</p>
-            </div>
-          </a>
-
-          <a href="https://huguggtr-gif.github.io/owol/" class="portfolio-card">
-            <div class="card-img">
-              <img src="img/owel.png" alt="Owol" />
-            </div>
-            <div class="card-overlay">
+            <!-- Card 1: FRAMA -->
+            <a href="https://huguggtr-gif.github.io/portfolio_frama/" class="portfolio-card">
+              <div class="card-img">
+                <img src="img/frama.jpg" alt="Frama" />
+              </div>
               <div class="card-overlay">
                 <p><span>TYPE</span><br />Personal Project</p>
-
-                <p>
-                  <span>ROLE</span><br />
-                  UI Design / Frontend Publishing
-                  <div class=icons>
-                  <img src="img/figma.png" alt="#"" />
-                  <img src="img/html.png" alt="#" />
-                  <img src="img/css.png" alt="#"" />
-                  <img src="img/java.png" alt="#" />
-                    <img src="img/claude.png" alt="#" />
-                  <img src="img/chatgpt.png" alt="#" />
-                </div>
-                </p>
-
+                <p><span>ROLE</span><br />UI Design / Frontend Publishing</p>
                 <p>
                   <span>TOOLS</span><br />
-                  <div class=icons>
-                  <img src="img/figma.png" alt="#"" />
-                  <img src="img/html.png" alt="#" />
-                  <img src="img/css.png" alt="#"" />
-                  <img src="img/java.png" alt="#" />
-                  <img src="img/claude.png" alt="#" />
-                  <img src="img/chatgpt.png" alt="#" />
-                </div>
+                  <div class="icons">
+                    <img src="img/figma.png" alt="#" />
+                    <img src="img/html.png" alt="#" />
+                    <img src="img/css.png" alt="#" />
+                    <img src="img/java.png" alt="#" />
+                    <img src="img/illust.png" alt="#" />
+                    <img src="img/photoshop.png" alt="#" />
+                    <img src="img/claude.png" alt="#" />
+                    <img src="img/chatgpt.png" alt="#" />
+                  </div>
                 </p>
-
-                <p>
-                  <span>CONCEPT</span><br />
-                  Stay & Experience space website redesign
-                </p>
-
-                <p>
-                  <span>FOCUS</span><br />
-                  Visual Layout / Scroll Interaction / Responsive Web
-                </p>
+                <p><span>CONCEPT</span><br />Minimal Nordic design inspired by natural materials</p>
+                <p><span>FOCUS</span><br />Typography / Grid System / Scroll Interaction</p>
               </div>
-            </div>
+              <div class="card-text">
+                <h3>FRAMA HOMEPAGE<br />REDESIGN</h3>
+              </div>
+            </a>
 
-            <div class="card-text">
-              <h3>OWOL SCHOOL<br />HOMEPAGE REDESIGN</h3>
-            </div>
-          </a>
+            <!-- Card 2: OWOL 1 -->
+            <a href="https://huguggtr-gif.github.io/owol/" class="portfolio-card">
+              <div class="card-img">
+                <img src="img/owel.png" alt="Owol" />
+              </div>
+              <div class="card-overlay">
+                <p><span>TYPE</span><br />Personal Project</p>
+                <p><span>ROLE</span><br />UI Design / Frontend Publishing</p>
+                <p>
+                  <span>TOOLS</span><br />
+                  <div class="icons">
+                    <img src="img/figma.png" alt="#" />
+                    <img src="img/html.png" alt="#" />
+                    <img src="img/css.png" alt="#" />
+                    <img src="img/java.png" alt="#" />
+                    <img src="img/claude.png" alt="#" />
+                    <img src="img/chatgpt.png" alt="#" />
+                  </div>
+                </p>
+                <p><span>CONCEPT</span><br />Stay & Experience space website redesign</p>
+                <p><span>FOCUS</span><br />Visual Layout / Scroll Interaction / Responsive Web</p>
+              </div>
+              <div class="card-text">
+                <h3>OWOL SCHOOL<br />HOMEPAGE REDESIGN</h3>
+              </div>
+            </a>
+
+            <!-- Card 3: terrarosa -->
+            <a href="https://huguggtr-gif.github.io/terrarosa/" class="portfolio-card">
+              <div class="card-img">
+                <img src="img/terrarosa.png" alt="terrarosa" />
+              </div>
+              <div class="card-overlay">
+                <p><span>TYPE</span><br />Personal Project</p>
+                <p><span>ROLE</span><br />UI Design / Frontend Publishing</p>
+                <p>
+                  <span>TOOLS</span><br />
+                  <div class="icons">
+                    <img src="img/figma.png" alt="#" />
+                    <img src="img/html.png" alt="#" />
+                    <img src="img/css.png" alt="#" />
+                    <img src="img/java.png" alt="#" />
+                    <img src="img/photoshop.png" alt="#" />
+                    <img src="img/claude.png" alt="#" />
+                    <img src="img/chatgpt.png" alt="#" />
+                  </div>
+                </p>
+                <p><span>CONCEPT</span><br />Coffee Culture & Brand Experience Redesign</p>
+                <p><span>FOCUS</span><br />Visual Storytelling / Magazine Layout / Interaction Design / Responsive Web</p>
+              </div>
+              <div class="card-text">
+                <h3>TERRAROSA<br />HOMEPAGE REDESIGN</h3>
+              </div>
+            </a>
+
+            <!-- Card 4: SSENSE (Team Project - 마지막) -->
+            <a href="https://chaeseunghyeon.github.io/team/" class="portfolio-card">
+              <div class="card-img">
+                <img src="img/team.png" alt="Ssense" />
+              </div>
+              <div class="card-overlay">
+                <p><span>TYPE</span><br />Team Project</p>
+                <p><span>ROLE</span><br />UI Design / Frontend Publishing<br />(Women / Dress Section)</p>
+                <p>
+                  <span>TOOLS</span><br />
+                  <div class="icons">
+                    <img src="img/figma.png" alt="#" />
+                    <img src="img/html.png" alt="#" />
+                    <img src="img/css.png" alt="#" />
+                    <img src="img/java.png" alt="#" />
+                    <img src="img/illust.png" alt="#" />
+                    <img src="img/photoshop.png" alt="#" />
+                    <img src="img/claude.png" alt="#" />
+                    <img src="img/chatgpt.png" alt="#" />
+                  </div>
+                </p>
+                <p><span>CONCEPT</span><br />Fashion e-commerce website redesign</p>
+                <p><span>FOCUS</span><br />Product Layout / Category Navigation / Responsive Web</p>
+              </div>
+              <div class="card-text">
+                <h3>SSENSE HOMEPAGE<br />REDESIGN</h3>
+                <p>TEAM PROJECT</p>
+              </div>
+            </a>
+
+          </div>
+
+          <!-- 드래그 힌트 화살표 -->
+          <div class="carousel-hint">
+            <span>DRAG</span>
+            <i class="fa-solid fa-chevron-right" style="color: rgb(0, 0, 0);"></i>
+          </div>
         </div>
+
       </div>
     </section>
 
@@ -312,12 +300,7 @@
       <div class="contact-container">
         <div class="phone-wrapper">
           <img src="img/insta.png" alt="Contact Phone" class="phone-img" />
-
-          <a
-            href="https://www.instagram.com/usijuni/"
-            target="_blank"
-            class="phone-btn"
-          >
+          <a href="https://www.instagram.com/usijuni/" target="_blank" class="phone-btn">
             <div class="circle-overlay"></div>
             <img src="img/click.png" alt="Click Icon" class="click-icon" />
           </a>
