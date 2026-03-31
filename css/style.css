@@ -15,7 +15,7 @@ html {
 body {
   font-family: 'Bebas Neue', sans-serif;
   background: #454545;
-  color: #f1f1e6;
+  color: #F0F0E9;
   overflow-x: hidden;
   height: 100%;
   cursor: none;
@@ -29,7 +29,7 @@ body::-webkit-scrollbar {
 .cursor {
   width: 35px;
   height: 35px;
-  background: #c16548;
+  background: #D96B2B;
   border-radius: 50%;
   position: fixed;
   top: 0;
@@ -44,7 +44,7 @@ body::-webkit-scrollbar {
 
 .cursor.active {
   transform: translate(-50%, -50%) scale(2.5);
-  background: #f1f1e6;
+  background: #F0F0E9;
   mix-blend-mode: difference;
 }
 
@@ -64,19 +64,19 @@ body::-webkit-scrollbar {
 }
 
 .nav ul li a.active {
-  color: #c16548;
+  color: #D96B2B;
   font-weight: bold;
 }
 
 .nav a {
   text-decoration: none;
-  color: #f1f1e6;
+  color: #F0F0E9;
   font-size: 30px;
   transition: 0.4s;
 }
 
 .nav a:hover {
-  color: #b8d8ba;
+  color: #fff;
 }
 
 .nav.light-mode a {
@@ -84,7 +84,7 @@ body::-webkit-scrollbar {
 }
 
 .nav.light-mode a:hover {
-  color: #c16548;
+  color: #D96B2B;
 }
 
 /* 섹션 공통 */
@@ -100,7 +100,7 @@ body::-webkit-scrollbar {
 
 /* INTRO Section */
 .hero {
-  background: #f1f1e6;
+  background: #F0F0E9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,7 +175,7 @@ body::-webkit-scrollbar {
 }
 
 .history-title span {
-  color: #f1f1e6;
+  color: #F0F0E9;
 }
 
 .history-container {
@@ -198,7 +198,7 @@ body::-webkit-scrollbar {
   position: absolute;
   width: 0%;
   height: 100%;
-  background: #f1f1e6;
+  background: #F0F0E9;
   left: 0;
   top: 0;
 }
@@ -223,7 +223,7 @@ body::-webkit-scrollbar {
 .dot {
   width: 10px;
   height: 10px;
-  background: #f1f1e6;
+  background: #F0F0E9;
   z-index: 10;
   margin-left: -5px;
   flex-shrink: 0;
@@ -233,7 +233,7 @@ body::-webkit-scrollbar {
 .line-vertical {
   width: 1px;
   height: 0;
-  background: #f1f1e6;
+  background: #F0F0E9;
   position: absolute;
   left: 0;
 }
@@ -288,8 +288,8 @@ body::-webkit-scrollbar {
    ================================================ */
 
 :root {
-  --bg-portfolio: #f1f1e6;
-  --card-orange: #c16548;
+  --bg-portfolio: #F0F0E9;
+  --card-orange: #D96B2B;
   --text-dark: #1a1a1a;
   --border-color: #1a1a1a;
 }
@@ -299,12 +299,12 @@ body::-webkit-scrollbar {
 }
 
 .nav.dark-mode a.active {
-  color: #c16548;
+  color: #D96B2B;
   font-weight: bold;
 }
 
 .nav.dark-mode a:hover {
-  color: #000000;
+  color: #1a1a1a;
 }
 
 .section-portfolio {
@@ -493,6 +493,7 @@ body::-webkit-scrollbar {
   padding: 0 80px;
   color: var(--text-dark);
   font-size: 14px;
+  font-weight: 700;;
   font-family: sans-serif;
   letter-spacing: 2px;
   opacity: 0.45;
@@ -515,7 +516,7 @@ body::-webkit-scrollbar {
 
 .skill-marquee {
   width: 100%;
-  background-color: #f1f1e6;
+  background-color: #F0F0E9;
   padding: 30px 0;
   border-top: 1px solid #454545;
   border-bottom: 1px solid #454545;
@@ -543,7 +544,7 @@ body::-webkit-scrollbar {
 .experience-text h2 {
   font-size: clamp(100px, 10vw, 150px);
   line-height: 0.9;
-  color: #f1f1e6;
+  color: #F0F0E9;
   font-weight: 400;
 }
 
@@ -551,17 +552,17 @@ body::-webkit-scrollbar {
   font-family: sans-serif;
   font-size: 24px;
   line-height: 1.6;
-  color: #f1f1e6;
+  color: #F0F0E9;
   text-align: right;
   margin-bottom: 10px;
 }
 
 .nav.skill-mode a {
-  color: #f1f1e6;
+  color: #F0F0E9;
 }
 
 .nav.skill-mode a.active {
-  color: #c16548;
+  color: #D96B2B;
   font-weight: bold;
 }
 
@@ -569,7 +570,7 @@ body::-webkit-scrollbar {
 .section-contact {
   width: 100%;
   min-height: 100vh;
-  background-color: #f1f1e6;
+  background-color: #F0F0E9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -629,7 +630,7 @@ body::-webkit-scrollbar {
 .tag {
   display: inline-block;
   padding: 15px 35px;
-  border: 2px solid #c16548;
+  border: 2px solid #D96B2B;
   border-radius: 50px;
   background: #fff;
   color: #1a1a1a;
@@ -791,12 +792,12 @@ body::-webkit-scrollbar {
     top: 35px;
     width: 10px;
     height: 10px;
-    background: #c16548;
+    background: #D96B2B;
   }
 
   .v-year {
     font-size: 32px;
-    color: #f1f1e6;
+    color: #F0F0E9;
     line-height: 1;
   }
 
